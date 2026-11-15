@@ -3,97 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NetSenior - Planes, Promociones y Fidelización</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <title>Planes y Tarifas - Nubea Cloud</title>
+  <link rel="stylesheet" href="../css/estilos_empresa.css">
+
 </head>
 <body>
 
   <header>
-    <div class="nav-container">
-      <a href="index.html"><img src="img/Logotipo_NetSenior.png" class="logo-slot" alt="Logo NetSenior"></a>
+     <div class="nav-container">
+        <a href="index.html" class="brand">
+        <img class="brand-logo" src="../img/logo-nubea.png" alt="Logotipo Nubea Cloud" style="height: 46px; width: auto; object-fit: contain;">
+        <span>Nubea Cloud</span>
+      </a>
       <nav>
         <a href="index.html">Inicio</a>
-        <a href="servicios.html">Los 3 Pilares</a>
-        <a href="planes.html" class="active">Planes y Club</a>
-        <a href="recursos.html">Recursos Gratis</a>
-        <a href="nosotros.html">Seguridad y Contacto</a>
+        <a href="soluciones.html">Soluciones</a>
+        <a href="planes.html" class="active">Planes y Tarifas</a>
+        <a href="seguridad.html">Seguridad RGPD</a>
+        <a href="contacto.html" class="btn-nav">Contacto y Demo</a>
       </nav>
     </div>
   </header>
 
+  <div class="page-header">
+    <h1>Planes Transparentes sin Sorpresas</h1>
+    <p style="color: var(--text-muted); margin-top: 8px;">Tráfico ilimitado incluido y migración gratuita desde tu proveedor actual.</p>
+  </div>
+
   <main class="container">
-    <h1>Planes Transparentes para cada Familia</h1>
-    <p style="text-align: center; max-width: 700px; margin: 0 auto;">El acompañamiento vecinal básico siempre será gratuito. Ofrecemos planes flexibles para familias que buscan gestión continua y tranquilidad.</p>
-
-    <div class="pricing-grid">
-      <div class="plan-card">
-        <div>
-          <span class="badge" style="background: #2b6cb0;">Comunidad</span>
-          <h2>Plan Red Vecinal</h2>
-          <div class="price">0 € <span>/ mes</span></div>
-          <ul>
-            <li>✅ Paseos y charla con voluntarios</li>
-            <li>✅ Acceso a talleres comunitarios</li>
-            <li>✅ Conexión con Servicios Sociales</li>
-            <li>✅ Teléfono de atención vecinal</li>
-          </ul>
-        </div>
-        <strong>Ideal para mantenerse activo en el barrio.</strong>
-      </div>
-
-      <div class="plan-card popular">
-        <div>
-          <span class="badge">Más elegido · 1er mes gratis</span>
-          <h2>Plan Barrio Activo</h2>
-          <div class="price">19,90 € <span>/ mes</span></div>
-          <ul>
-            <li>✅ Todo lo incluido en Red Vecinal</li>
-            <li>✅ Gestión de pedidos a comercios locales</li>
-            <li>✅ Cuenta Tranquilidad: avisos a familiares</li>
-            <li>✅ Descuentos en tiendas amigas del barrio</li>
-          </ul>
-        </div>
-        <strong>2 meses gratis al elegir pago anual (199 €/año).</strong>
-      </div>
-
-      <div class="plan-card">
-        <div>
-          <span class="badge" style="background: #475569;">Pago por uso</span>
-          <h2>Apoyo Experto</h2>
-          <div class="price">12 € <span>/ hora</span></div>
-          <ul>
-            <li>✅ Acompañamiento a citas médicas</li>
-            <li>✅ Gestiones bancarias o administrativas</li>
-            <li>✅ Sin cuota mensual ni permanencia</li>
-            <li>✅ Bono bienvenida: 5 € de regalo en la 1ª cita</li>
-          </ul>
-        </div>
-        <strong>Para necesidades puntuales o imprevistos.</strong>
-      </div>
+    <div class="billing-toggle">
+      <span>Facturación Mensual</span>
+      <input type="checkbox" id="annualToggle" onchange="actualizarPrecios()" style="width: 20px; height: 20px; cursor: pointer;">
+      <label for="annualToggle" style="cursor: pointer; color: var(--primary-dark);">Pago Anual (Ahorra un 20 %)</label>
     </div>
 
-    <section class="promo-section">
-      <h2>🎁 Promociones y Club de Fidelización "Vecino Activo"</h2>
-      <div class="promo-grid">
-        <div class="promo-item">
-          <h3>Mes de Bienvenida (0 €)</h3>
-          <p>Prueba el Plan Barrio Activo durante 30 días sin coste ni compromiso para comprobar la tranquilidad familiar.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div>
+          <h3>Cloud Starter</h3>
+          <p style="color: #64748b; font-size: 0.9rem;">Para webs corporativas y proyectos iniciales</p>
+          <div class="price-value"><span id="p-starter">29 €</span> <span style="font-size: 1rem; color: #64748b; font-weight: 400;">/ mes</span></div>
+          <ul class="price-list">
+            <li>✓ 2 vCPU dedicadas</li>
+            <li>✓ 4 GB RAM DDR5</li>
+            <li>✓ 80 GB Almacenamiento NVMe</li>
+            <li>✓ Backups semanales incluidos</li>
+          </ul>
         </div>
-        <div class="promo-item">
-          <h3>Programa "Apadrina a un Vecino"</h3>
-          <p>Invita a otro vecino del barrio: ambos ganáis 1 mes gratis o un vale de 10 € en fruterías y farmacias asociadas.</p>
-        </div>
-        <div class="promo-item">
-          <h3>Puntos Vecino Activo</h3>
-          <p>Cada paseo, taller o compra local suma puntos canjeables por horas gratuitas de acompañamiento y regalos en tu cumpleaños.</p>
-        </div>
+        <a href="contacto.html" class="btn-primary">Contratar Starter</a>
       </div>
-    </section>
+
+      <div class="price-card featured">
+        <div>
+          <span style="background: var(--primary); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700;">MÁS ELEGIDO</span>
+          <h3 style="margin-top: 8px;">Cloud Business</h3>
+          <p style="color: #64748b; font-size: 0.9rem;">Ideal para pymes, ERP y comercio electrónico</p>
+          <div class="price-value"><span id="p-business">79 €</span> <span style="font-size: 1rem; color: #64748b; font-weight: 400;">/ mes</span></div>
+          <ul class="price-list">
+            <li>✓ 4 vCPU de alto rendimiento</li>
+            <li>✓ 16 GB RAM DDR5</li>
+            <li>✓ 250 GB Almacenamiento NVMe</li>
+            <li>✓ Backups diarios y Soporte 24/7</li>
+          </ul>
+        </div>
+        <a href="contacto.html" class="btn-primary">Probar 14 días gratis</a>
+      </div>
+
+      <div class="price-card">
+        <div>
+          <h3>Cloud Enterprise</h3>
+          <p style="color: #64748b; font-size: 0.9rem;">Infraestructura crítica de alta disponibilidad</p>
+          <div class="price-value"><span id="p-enterprise">189 €</span> <span style="font-size: 1rem; color: #64748b; font-weight: 400;">/ mes</span></div>
+          <ul class="price-list">
+            <li>✓ 8+ vCPU dedicadas</li>
+            <li>✓ 32 GB RAM DDR5 escalable</li>
+            <li>✓ 1 TB Almacenamiento NVMe</li>
+            <li>✓ Arquitecto Cloud asignado</li>
+          </ul>
+        </div>
+        <a href="contacto.html" class="btn-primary">Solicitar estudio</a>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p><strong>NetSenior</strong> · Precios sociales y transparentes</p>
-    <p class="footer__parrafo--menor">&copy2026 - Nubea Cloud</p>
+    <div class="footer-grid">
+      <div>
+        <h4>Nubea Cloud S.L.</h4>
+        <p>Parque Empresarial Castellana Norte, Edificio 4, Planta 3.<br>28046 Madrid, España.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="index.html" class="footer__nav--link">Inicio</a>
+        <a href="soluciones.html" class="footer__nav--link">Soluciones Cloud</a>
+        <a href="seguridad.html" class="footer__nav--link">Seguridad RGPD</a>
+        <a href="contacto.html" class="footer__nav--link">Solicitar Demo</a>
+      </div>
+      <div>
+        <h4>Atención al Cliente</h4>
+        <p>📞 Teléfono: +34 910 800 420</p>
+        <p>✉️ Email: hola@nubeacloud.es</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Nubea Cloud S.L. · Todos los derechos reservados.</div>
   </footer>
+
+  <script>
+    function actualizarPrecios() {
+      const anual = document.getElementById('annualToggle').checked;
+      document.getElementById('p-starter').textContent = anual ? '23 €' : '29 €';
+      document.getElementById('p-business').textContent = anual ? '63 €' : '79 €';
+      document.getElementById('p-enterprise').textContent = anual ? '151 €' : '189 €';
+    }
+  </script>
 </body>
 </html>
