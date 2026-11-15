@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetSenior - Red Vecinal de Apoyo a Mayores</title>
+  <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+
+  <div class="top-bar">
+    <span>📞 Teléfono gratuito de ayuda vecinal: <strong>900 123 456</strong></span>
+    <button class="btn-a11y" onclick="document.body.classList.toggle('large-text')">🔍 Aumentar / Reducir Letra</button>
+  </div>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html"><img src="/img/Logotipo_NetSenior.png" class="logo-slot" alt="Logo NetSenior"></a>
+      <nav>
+        <a href="index.html" class="active">Inicio</a>
+        <a href="servicios.html">Los 3 Pilares</a>
+        <a href="planes.html">Planes y Club</a>
+        <a href="recursos.html">Recursos Gratis</a>
+        <a href="nosotros.html">Seguridad y Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Tu barrio te acompaña, te cuida y te escucha</h1>
+      <p>Combatimos la soledad no deseada conectando a las personas mayores con voluntarios vecinales, comercios de confianza y servicios sociales.</p>
+      <a href="#solicitar" class="btn-primary">Pedir ayuda o compañía ahora</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <h2 class="section-title">¿Cómo te ayudamos hoy?</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>🤝 Voluntarios Vecinales</h3>
+        <p>Vecinos verificados de tu misma calle para salir a pasear, conversar un rato o compartir juegos de mesa y lectura.</p>
+      </div>
+      <div class="card">
+        <h3>🏪 Comercios Locales</h3>
+        <p>Fruterías, farmacias y panaderías del barrio que preparan tu pedido y te lo acercan a casa con trato cercano.</p>
+      </div>
+      <div class="card">
+        <h3>🏥 Servicios Sociales</h3>
+        <p>Coordinación con centros de salud y centros cívicos para citas médicas, trámites y talleres de memoria.</p>
+      </div>
+    </div>
+
+    <!-- Simulador funcional para demostrar el flujo de la app -->
+    <section id="solicitar" class="simulator-box">
+      <h2 style="color: var(--primary); margin-bottom: 12px;">Prueba rápida: Solicita un servicio</h2>
+      <p style="color: var(--muted); margin-bottom: 20px;">Selecciona qué necesitas y te asignaremos un recurso de tu barrio.</p>
+      
+      <form onsubmit="simularSolicitud(event)">
+        <div class="form-group">
+          <label for="tipo">¿Qué tipo de apoyo necesitas?</label>
+          <select id="tipo" required>
+            <option value="Paseo y conversación con voluntario">🚶‍♂️ Paseo y conversación (Voluntario - Gratuito)</option>
+            <option value="Pedido a comercio local del barrio">🛒 Compra en comercio amigo del barrio</option>
+            <option value="Acompañamiento a cita médica">🏥 Acompañamiento a cita médica o gestión</option>
+            <option value="Inscripción a taller comunitario">🎨 Apuntarme a un taller del centro cívico</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nombre">Tu nombre o el de tu familiar:</label>
+          <input type="text" id="nombre" placeholder="Ej. Carmen García" required>
+        </div>
+        <div class="form-group">
+          <label for="barrio">Tu barrio o código postal:</label>
+          <input type="text" id="barrio" placeholder="Ej. Centro / 03600" required>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%;">Enviar solicitud al barrio</button>
+      </form>
+
+      <div id="mensaje-exito" class="alert-success"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>NetSenior</strong> · Proyecto de Innovación Social Urbana</p>
+    <p style="margin-top: 8px;">Conectando generaciones y fortaleciendo el comercio de proximidad.</p>
+  </footer>
+
+  <script>
+    function simularSolicitud(e) {
+      e.preventDefault();
+      const tipo = document.getElementById('tipo').value;
+      const nombre = document.getElementById('nombre').value;
+      const barrio = document.getElementById('barrio').value;
+      const box = document.getElementById('mensaje-exito');
+      box.style.display = 'block';
+      box.innerHTML = `✅ ¡Gracias, ${nombre}! Hemos registrado tu solicitud de "${tipo}" en la zona ${barrio}. Un coordinador vecinal te llamará en menos de 15 minutos.`;
+    }
+  </script>
+</body>
+</html>

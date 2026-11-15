@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <!-- Filtro sutil para simular profundidad si es necesario, pero manteniéndolo limpio -->
+    <style>
+      .text-net { font-family: 'Nunito', 'Segoe UI', sans-serif; font-weight: 400; fill: #005F73; font-size: 54px; }
+      .text-senior { font-family: 'Nunito', 'Segoe UI', sans-serif; font-weight: 800; fill: #005F73; font-size: 54px; }
+      .base-pillar { stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .p1 { stroke: #CA5500; } /* Voluntarios - Naranja Coral */
+      .p2 { stroke: #0A5C36; } /* Comercios - Verde Pino */
+      .p3 { stroke: #005F73; } /* Servicios Sociales - Azul Cerceta */
+    </style>
+  </defs>
+
+  <!-- Fondo neutral claro para asegurar contraste WCAG absoluto -->
+  <rect width="100%" height="100%" fill="#F8F9FA" />
+
+  <g transform="translate(0, -10)">
+    <!-- ================= ISOTIPO (EL TRIÁNGULO DE SOPORTE) ================= -->
+    <!-- Red de Conexión Externa (Líneas del triángulo base que entrelazan los pilares) -->
+    <path d="M 400 130 L 530 330 L 270 330 Z" stroke="#E5E5E5" stroke-width="8" fill="none" stroke-linejoin="round" />
+
+    <!-- Pilar Superior: Voluntariado Vecinal (Naranja Coral) -->
+    <circle cx="400" cy="130" r="22" fill="#CA5500" />
+    <path d="M 365 170 C 365 150, 435 150, 435 170" stroke="#CA5500" stroke-width="12" fill="none" stroke-linecap="round" />
+
+    <!-- Pilar Inferior Derecho: Comercio Local (Verde Pino) -->
+    <circle cx="530" cy="330" r="22" fill="#0A5C36" />
+    <path d="M 495 370 C 495 350, 565 350, 565 370" stroke="#0A5C36" stroke-width="12" fill="none" stroke-linecap="round" />
+
+    <!-- Pilar Inferior Izquierdo: Servicios Sociales (Azul Cerceta) -->
+    <circle cx="270" cy="330" r="22" fill="#005F73" />
+    <path d="M 235 370 C 235 350, 305 350, 305 370" stroke="#005F73" stroke-width="12" fill="none" stroke-linecap="round" />
+
+    <!-- Lazos de Conexión / Abrazos hacia el centro (Estructura dinámica integrada) -->
+    <!-- Abrazo desde Voluntarios al centro -->
+    <path d="M 400 180 C 400 230, 430 250, 420 260" stroke="#CA5500" stroke-width="10" fill="none" stroke-linecap="round" />
+    <!-- Abrazo desde Comercio al centro -->
+    <path d="M 485 330 C 440 320, 420 290, 410 275" stroke="#0A5C36" stroke-width="10" fill="none" stroke-linecap="round" />
+    <!-- Abrazo desde Servicios Sociales al centro -->
+    <path d="M 315 330 C 360 320, 380 290, 390 275" stroke="#005F73" stroke-width="10" fill="none" stroke-linecap="round" />
+
+    <!-- Núcleo Central: El Mayor Protegido (Silueta en espacio seguro) -->
+    <circle cx="400" cy="242" r="16" fill="#005F73" />
+    <path d="M 375 285 C 375 260, 425 260, 425 285" stroke="#005F73" stroke-width="10" fill="none" stroke-linecap="round" />
+    <!-- Aura de protección / base del Mayor -->
+    <path d="M 360 295 C 360 310, 440 310, 440 295" stroke="#CA5500" stroke-width="6" fill="none" stroke-linecap="round" />
+
+    <!-- ================= LOGOTIPO (TEXTO DE MARCA) ================= -->
+    <g id="BrandName" transform="translate(0, 10)">
+      <text x="400" y="475" text-anchor="middle">
+        <tspan class="text-net">Net</tspan><tspan class="text-senior">Senior</tspan>
+      </text>
+      <!-- Subtexto descriptivo de accesibilidad inmediata -->
+      <text x="400" y="515" font-family="'Segoe UI', sans-serif" font-weight="600" fill="#6C757D" font-size="16" letter-spacing="4" text-anchor="middle">RED COMUNITARIA URBANA</text>
+    </g>
+  </g>
+</svg>

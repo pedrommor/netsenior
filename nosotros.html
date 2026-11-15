@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguridad y Contacto - NetSenior</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html"><img src="img/Logotipo_NetSenior.png" class="logo-slot"></a>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Los 3 Pilares</a>
+        <a href="planes.html">Planes y Club</a>
+        <a href="recursos.html">Recursos Gratis</a>
+        <a href="nosotros.html" class="active">Seguridad y Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Compromiso de Seguridad y Confianza</h1>
+    <p style="margin-bottom: 24px;">Sabemos que abrir la puerta de casa o confiar el cuidado de un familiar requiere garantías absolutas.</p>
+
+    <section class="safety-box">
+      <h2>¿Cómo verificamos nuestra red vecinal?</h2>
+      <ul>
+        <li><strong>Identidad y antecedentes verificados:</strong> Todos los voluntarios pasan una entrevista personal y presentan certificado negativo de antecedentes.</li>
+        <li><strong>Acreditación visible:</strong> Cada voluntario lleva su credencial oficial y la familia recibe sus datos antes del encuentro.</li>
+        <li><strong>Seguimiento familiar en tiempo real:</strong> Los familiares autorizados reciben notificación al iniciar y finalizar cada paseo o recado.</li>
+        <li><strong>Coordinación con Servicios Sociales:</strong> Trabajamos en red con profesionales municipales ante cualquier situación de vulnerabilidad.</li>
+      </ul>
+    </section>
+
+    <section class="contact-form">
+      <h2 style="color: var(--primary); margin-bottom: 12px;">Únete al proyecto o pídenos información</h2>
+      <p style="margin-bottom: 20px;">Tanto si eres un familiar, como si quieres ser voluntario o adherir tu comercio del barrio, escríbenos.</p>
+      
+      <form onsubmit="event.preventDefault(); alert('¡Mensaje enviado! Nuestro equipo de coordinación vecinal se pondrá en contacto contigo hoy mismo.');">
+        <div class="form-group">
+          <label for="perfil">¿Cómo quieres participar?</label>
+          <select id="perfil">
+            <option>Soy familiar o persona mayor interesada</option>
+            <option>Quiero ser voluntario/a en mi barrio</option>
+            <option>Tengo un comercio local y quiero colaborar</option>
+            <option>Represento a Servicios Sociales o Asociación</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contacto-nombre">Nombre completo:</label>
+          <input type="text" id="contacto-nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="contacto-tel">Teléfono o Correo electrónico:</label>
+          <input type="text" id="contacto-tel" required>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Cuéntanos brevemente qué necesitas:</label>
+          <textarea id="mensaje" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar solicitud de contacto</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>NetSenior</strong> · Atención telefónica gratuita: 900 123 456</p>
+    <p class="footer__parrafo--menor">&copy2026 - Nubea Cloud</p>
+  </footer>
+</body>
+</html>
