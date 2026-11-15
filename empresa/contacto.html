@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto y Solicitar Demo - Nubea Cloud</title>
+  <link rel="stylesheet" href="../css/estilos_empresa.css">
+</head>
+<body>
+
+  <header>
+     <div class="nav-container">
+        <a href="index.html" class="brand">
+        <img class="brand-logo" src="../img/logo-nubea.png" alt="Logotipo Nubea Cloud" style="height: 46px; width: auto; object-fit: contain;">
+        <span>Nubea Cloud</span>
+      </a>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="soluciones.html">Soluciones</a>
+        <a href="planes.html">Planes y Tarifas</a>
+        <a href="seguridad.html">Seguridad RGPD</a>
+        <a href="contacto.html" class="btn-nav active">Contacto y Demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <h1>Hablemos de tu Proyecto Cloud</h1>
+    <p style="color: var(--text-muted); margin-top: 8px;">Solicita una prueba gratuita de 14 días o agenda una sesión con nuestros arquitectos.</p>
+  </div>
+
+  <main class="container">
+    <div class="info-box">
+      <h2>Oficinas Centrales y Soporte</h2>
+      <div class="info-item">
+        <strong>📍 Dirección Física</strong>
+        <p>Parque Empresarial Castellana Norte, Edificio 4, Planta 3.<br>28046 Madrid, España.</p>
+      </div>
+      <div class="info-item">
+        <strong>📞 Teléfonos Directos</strong>
+        <p>Comercial y Demos: +34 910 800 420<br>Emergencias NOC 24/7: +34 900 812 900</p>
+      </div>
+      <div class="info-item">
+        <strong>✉️ Correo Electrónico</strong>
+        <p>Información general: hola@nubeacloud.es<br>Soporte técnico: soporte@nubeacloud.es</p>
+      </div>
+      <div class="info-item">
+        <strong>🕒 Horario de Oficina</strong>
+        <p>Lunes a Viernes de 08:30 a 19:00 h (Soporte crítico 24/7).</p>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <h2 style="margin-bottom: 16px;">Solicitar Demo o Presupuesto</h2>
+      <form onsubmit="enviarFormulario(event)">
+        <div class="form-group">
+          <label for="c-nombre">Nombre y Apellidos *</label>
+          <input type="text" id="c-nombre" required placeholder="Ej. Laura Martínez">
+        </div>
+        <div class="form-group">
+          <label for="c-empresa">Empresa *</label>
+          <input type="text" id="c-empresa" required placeholder="Nombre de tu empresa">
+        </div>
+        <div class="form-group">
+          <label for="c-email">Correo Corporativo *</label>
+          <input type="email" id="c-email" required placeholder="laura@tuempresa.es">
+        </div>
+        <div class="form-group">
+          <label for="c-plan">Servicio de interés</label>
+          <select id="c-plan">
+            <option>Prueba gratuita 14 días (Cloud Business)</option>
+            <option>Plan Cloud Starter (29 €/mes)</option>
+            <option>Infraestructura a medida (Cloud Enterprise)</option>
+            <option>Migración de servidores / ERP</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="c-msg">Detalles de tu infraestructura</label>
+          <textarea id="c-msg" rows="3" placeholder="Indícanos número de usuarios o servidores actuales..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar solicitud</button>
+        <p id="c-ok" style="display: none; margin-top: 14px; color: #0284c7; font-weight: 700;"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Nubea Cloud S.L.</h4>
+        <p>Parque Empresarial Castellana Norte, Edificio 4, Planta 3.<br>28046 Madrid, España.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="index.html" class="footer__nav--link">Inicio</a>
+        <a href="soluciones.html" class="footer__nav--link">Soluciones Cloud</a>
+        <a href="planes.html" class="footer__nav--link">Planes y Precios</a>
+        <a href="seguridad.html" class="footer__nav--link">Seguridad RGPD</a>
+      </div>
+      <div>
+        <h4>Atención al Cliente</h4>
+        <p>📞 Teléfono: +34 910 800 420</p>
+        <p>✉️ Email: hola@nubeacloud.es</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Nubea Cloud S.L. · CIF B-88492011 · Todos los derechos reservados.</div>
+  </footer>
+
+  <script>
+    function enviarFormulario(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('c-nombre').value;
+      const box = document.getElementById('c-ok');
+      box.style.display = 'block';
+      box.textContent = `✅ ¡Solicitud recibida, ${nombre}! Un arquitecto de Nubea Cloud te contactará hoy mismo.`;
+    }
+  </script>
+</body>
+</html>
