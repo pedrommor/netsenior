@@ -32,6 +32,7 @@
     .footer-grid h4 { color: white; margin-bottom: 12px; }
     .footer-grid a { color: var(--text-muted); text-decoration: none; display: block; margin-bottom: 6px; }
     .footer-bottom { max-width: 1140px; margin: 20px auto 0; text-align: center; font-size: 0.85rem; color: var(--primary);}
+    .footer-bottom:hover{color:var(--text-muted);}
     .footer__nav--link:hover{ color: var(--primary-dark)}
     /*soluciones*/
     .btn-nav { background: var(--primary) !important; color: white !important; padding: 8px 16px !important; font-weight: 600 !important; }
