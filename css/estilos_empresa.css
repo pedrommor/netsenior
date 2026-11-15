@@ -8,7 +8,7 @@
     .brand span { color: var(--accent); }
     nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
     nav a { color: var(--text-muted); text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 6px 10px; border-radius: 6px; }
-    nav a:hover, nav a.active { color: white; background: rgba(255,255,255,0.08); }
+    nav a:hover, nav a.active { color: white; /*background: rgba(255,255,255,0.08);*/ background: var(--primary); }
     .btn-nav { background: var(--primary) !important; color: white !important; padding: 8px 16px !important; font-weight: 600 !important; }
     .hero { background: radial-gradient(circle at top right, #1e3a8a 0%, var(--bg-dark) 65%); color: white; padding: 84px 24px; text-align: center; }
     .hero-inner { max-width: 820px; margin: 0 auto; }
